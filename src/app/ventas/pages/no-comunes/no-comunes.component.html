@@ -57,4 +57,14 @@
       <pre>{{ nombre | slice: 0:4 }}</pre>
     </p-fieldset>
   </div>
+
+  <div class="p-col-12 p-md-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          <b>{{ item.key | titlecase }} : {{ item.value }}</b>
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
 </div>
